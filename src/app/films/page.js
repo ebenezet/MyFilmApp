@@ -7,21 +7,13 @@ export default async function FilmPage({ searchParams }) {
   const films = (await db.query(`SELECT * FROM films`)).rows;
   console.log(films);
 
-  // if (query.sortBy == "asc") {
-  //   // Sort films in ascending order by title
-  //   films.sort((a, b) => a.title.localeCompare(b.title));
-  // }
-  // // Sort films in descending order by title
-  // else if (query.sortBy == "desc") {
-  //   films.sort((a, b) => b.title.localeCompare(a.title));
-  // }
-
   if (query.sortBy == "asc") {
     //Sort films in ascending order by title
     films.sort((a, b) => {
       console.log(a, b);
       return a.title.localeCompare(b.title);
     });
+    //Sort films in descending order by title
   } else if (query.sortBy == "desc") {
     films.sort((a, b) => {
       return b.title.localeCompare(a.title);

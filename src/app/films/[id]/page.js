@@ -2,25 +2,13 @@ import pg from "pg";
 import Image from "next/image";
 import Link from "next/link";
 import { db } from "@/utils/utilities";
+import CommentsPage from "@/component/Comments";
 
 export default async function IndividualFilmPage({ params }) {
   const { id } = await params;
 
   const singleFilm = (await db.query(`SELECT * FROM films WHERE id = $1`, [id]))
     .rows[0];
-
-  function handleDeleteFilm() {
-    // Logic to delete the film from the database
-
-    db.query(`DELETE FROM films WHERE id = $1`, [id]);
-    console.log(`Film with id ${id} deleted`);
-  }
-
-  console.log(singleFilm);
-
-  if (!singleFilm) {
-    return <div>Film not found</div>;
-  }
 
   return (
     <div>
@@ -37,6 +25,9 @@ export default async function IndividualFilmPage({ params }) {
       </figurecaption>
       <br />
       <p>Fancy deleting this film? Please click to button below</p>
+
+      <CommentsPage params={params} />
+
       {/* <button onClick={() => handleDeleteFilm}>Delete Film</button> */}
       <br />
       <Link href="/films">Back to Films</Link>
