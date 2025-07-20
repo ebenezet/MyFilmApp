@@ -20,15 +20,15 @@ export default async function CommentsPage({ params }) {
   console.log(reviews);
   return (
     <div>
-      <h1>The film reviews</h1>
-      <ul>
+      <h2 className="thefilmsreviews">*******The film reviews*******</h2>
+      
         {reviews.map((review) => (
-          <div key={review.id}>
-            <li>{review.name}</li>
-            <li>{review.comment}</li>
+          <div key={review.id} className="reviews-container">
+            <p>{review.comment} by {review.name}</p>
+            
           </div>
         ))}
-      </ul>
+      
     </div>
   );
 }

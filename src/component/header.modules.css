@@ -20,3 +20,13 @@ h1{
  gap: 5rem;
  font-weight: bold;
 }
+
+.navelement{
+    text-decoration: underline;
+}
+
+.navelement:hover{
+    color: darkgreen;
+    cursor: pointer;
+    text-decoration:underline;
+}

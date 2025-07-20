@@ -11,9 +11,9 @@ export default async function IndividualFilmPage({ params }) {
     .rows[0];
 
   return (
-    <div>
-      <h1> Film id: {singleFilm.id}</h1>
-      <h2>Film director:{singleFilm.director}</h2>
+    <div className="individual-film-page">
+      <h3> Film id: {singleFilm.id}</h3>
+      <h4>Film director: {singleFilm.director}</h4>
       <figurecaption key={singleFilm.id}>
         <Image
           src={singleFilm.cover}
@@ -23,14 +23,15 @@ export default async function IndividualFilmPage({ params }) {
         />
         <figurecaption>{singleFilm.title}</figurecaption>
       </figurecaption>
-      <br />
+
       <p>Fancy deleting this film? Please click to button below</p>
 
       <CommentsPage params={params} />
-
       {/* <button onClick={() => handleDeleteFilm}>Delete Film</button> */}
-      <br />
-      <Link href="/films">Back to Films</Link>
+
+      <Link href="/films" className="backtofilms">
+        Back to Films
+      </Link>
     </div>
   );
 }

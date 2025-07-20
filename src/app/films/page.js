@@ -21,14 +21,13 @@ export default async function FilmPage({ searchParams }) {
   }
 
   return (
-    <div>
-      <h2>My Films</h2>
+    <div className="films-page">
+      <h2 className="myfilms">My Films</h2>
       <div className="sort-links">
         <Link href="/films?sortBy=asc">Sort Asc</Link>
         <Link href="/films?sortBy=desc">Sort Desc</Link>
         <Link href="/films">Reset Sort</Link>
       </div>
-
       <ul>
         {films.map((film) => (
           <div key={film.id} className="films-container">
@@ -36,7 +35,13 @@ export default async function FilmPage({ searchParams }) {
           </div>
         ))}
       </ul>
-      <Link href="/films/add-film">Fancy Adding a film to the database?</Link>
+      <p>
+        Fancy Adding a film to the database? →
+        <Link href="/films/add-film" className="clickme">
+          Click me
+        </Link>
+        ←
+      </p>{" "}
     </div>
   );
 }

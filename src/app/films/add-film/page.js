@@ -15,14 +15,15 @@ export default function NewFilm() {
       [title, director, year, cover]
     );
     console.log("Thank you for adding a film!");
+    console.log(newfilm);
 
-    revalidatePath("/posts");
+    revalidatePath("/reviews");
 
-    redirect("/posts");
+    redirect("/reviews");
   }
 
   return (
-    <form action={AddAFilm}>
+    <form action={AddAFilm} className="film-form-container">
       <label htmlFor="title">Title</label>
       <input id="title" name="title" type="text" />
       <label htmlFor="director">Director</label>

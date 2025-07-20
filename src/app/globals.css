@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -24,3 +23,106 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.home{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #b6ad90;
+  height:80vh
+}
+.films-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #b6ad90;
+  height:80vh
+}
+
+.myfilms {
+  font-size: 2rem;
+  color: #104911;
+  margin-bottom: 1rem;
+}
+
+.sort-links {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  color: green;
+  font-weight: bold;
+}
+
+.films-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clickme{
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.individual-film-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #b6ad90;
+  height: 80vh;
+}
+
+figurecaption {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thefilmsreviews {
+  font-size: 1.5rem;
+  color: green;
+  margin-bottom: 1rem;
+}
+
+.backtofilms {
+  color: #104911;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.reviews-container {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  margin: 0.5rem auto;
+}
+
+.film-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #b6ad90;
+  padding: 2rem;
+  height: 85vh;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 2rem;
+  border: 0.2rem solid #104911;
+} 
