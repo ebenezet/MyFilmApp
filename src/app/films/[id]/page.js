@@ -31,7 +31,6 @@ export default async function IndividualFilmPage({ params }) {
       {/* <button onClick={() => handleDeleteFilm}>Delete Film</button> */}
       <br />
       <Link href="/films">Back to Films</Link>
-      <Link href="/films/add-film">Fancy Adding a film to the database?</Link>
     </div>
   );
 }

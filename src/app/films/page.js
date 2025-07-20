@@ -22,7 +22,7 @@ export default async function FilmPage({ searchParams }) {
 
   return (
     <div>
-      <h1>My Films</h1>
+      <h2>My Films</h2>
       <div className="sort-links">
         <Link href="/films?sortBy=asc">Sort Asc</Link>
         <Link href="/films?sortBy=desc">Sort Desc</Link>
